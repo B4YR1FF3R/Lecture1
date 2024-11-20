@@ -45,7 +45,76 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
 
         bob.penColor("black");
         bob.width(5);
-        bob.speed(25);
+        bob.speed(500);
+
+        // Base
+        bob.forward(54);
+        bob.right(90);
+        bob.forward(30);
+        bob.right(90);
+        bob.forward(108);
+        bob.right(90);
+        bob.forward(30);
+        bob.right(90);
+        bob.forward(54);
+
+        // Leaf
+        bob.up();
+        bob.forward(54);
+        bob.left(90);
+        bob.down();
+
+        for(int i=0;i<3;i++) {
+
+            if(i==0) {
+                bob.forward(20);
+                bob.left(135);
+                bob.forward(25);
+                bob.right(90);
+                bob.forward(25);
+                bob.left(90);
+                bob.forward(25);
+            }
+            if(i==2) {
+                bob.right(90);
+                bob.forward(25);
+                bob.left(135);
+                bob.forward(20);
+            }
+            if(i==1) {
+            bob.right(90);
+            bob.forward(25);
+            bob.left(90);
+            bob.forward(25);
+            }
+
+        }
+
+        // Candle
+        bob.up();
+        bob.left(90);
+        bob.forward(52);
+        bob.left(90);
+        bob.down();
+        bob.forward(30);
+        bob.right(90);
+        bob.forward(1);
+        bob.dot("sandybrown",30);
+        bob.forward(1);
+        bob.right(90);
+        bob.forward(30);
+
+        // Leave
+        bob.up();
+        bob.speed(100);
+        for(int j=0;j<10;j++) {
+            bob.right(2);
+            bob.forward(10);
+            if(j==9) {
+                bob.speed(250);
+                bob.forward(500);
+            }
+        }
 
         // Walking Turtle01
 
